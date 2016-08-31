@@ -1,0 +1,88 @@
+Sorted Array of length 10
+123 126 231 234 498 650 765 789 790 999 
+Sorting Method		Swaps		Comparisons
+Selection Sort		5			45
+Bubble Sort			17			63
+Insertion Sort		17			26
+Quick Sort			11			11
+Merge Sort			26			41
+Best Sorting Method: Quick Sort
+
+
+Sorted Array of length 20
+2 3 9 12 17 20 31 43 45 54 56 57 67 76 78 87 90 100 121 206 
+Sorting Method		Swaps		Comparisons
+Selection Sort		17			190
+Bubble Sort			99			285
+Insertion Sort		99			118
+Quick Sort			121			148
+Merge Sort			76			104
+Best Sorting Method: Merge Sort
+
+
+Sorted Array of length 17
+12 14 32 78 345 435 543 652 765 987 3232 4354 4365 4567 5456 6789 7898 
+Sorting Method		Swaps		Comparisons
+Selection Sort		13			136
+Bubble Sort			87			256
+Insertion Sort		87			103
+Quick Sort			108			129
+Merge Sort			62			79
+Best Sorting Method: Merge Sort
+
+
+Sorted Array of length 14
+1007 1008 1009 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 1120 
+Sorting Method		Swaps		Comparisons
+Selection Sort		0			91
+Bubble Sort			0			13
+Insertion Sort		0			13
+Quick Sort			7			20
+Merge Sort			29			56
+Best Sorting Method: Insertion Sort
+
+
+Sorted Array of length 10
+6432 7643 8641 8976 9012 9431 9653 9812 9854 9876 
+Sorting Method		Swaps		Comparisons
+Selection Sort		5			45
+Bubble Sort			45			90
+Insertion Sort		45			54
+Quick Sort			56			65
+Merge Sort			34			34
+Best Sorting Method: Selection Sort
+
+
+Sorted Array of length 13
+121 236 653 875 985 3456 3476 4376 5376 7682 8162 8743 8763 
+Sorting Method		Swaps		Comparisons
+Selection Sort		9			78
+Bubble Sort			19			72
+Insertion Sort		19			31
+Quick Sort			32			45
+Merge Sort			41			59
+Best Sorting Method: Insertion Sort
+
+
+Sorted Array of length 9
+1021 1234 1290 2398 2987 3298 3476 4129 7612 
+Sorting Method		Swaps		Comparisons
+Selection Sort		7			36
+Bubble Sort			13			48
+Insertion Sort		13			21
+Quick Sort			21			31
+Merge Sort			24			37
+Best Sorting Method: Insertion Sort
+
+
+Sorted Array of length 26
+0 1 2 3 4 5 6 7 8 9 10 11 19 23 28 35 37 39 42 45 48 53 71 73 75 83 
+Sorting Method		Swaps		Comparisons
+Selection Sort		20			325
+Bubble Sort			182			525
+Insertion Sort		182			207
+Quick Sort			221			251
+Merge Sort			112			142
+Best Sorting Method: Merge Sort
+
+

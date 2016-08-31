@@ -1,0 +1,23 @@
+INDEX VERSION 1.127+/Volumes/Ballin' On A Budget/Workspace/.metadata/.plugins/org.eclipse.jdt.core
+949404224.index
+3683551120.index
+1073415769.index
+1886490311.index
+2625359041.index
+3705881481.index
+1998342878.index
+3600327532.index
+3917012861.index
+1224488655.index
+2826550345.index
+2711589882.index
+297182663.index
+897640124.index
+1269664436.index
+2659184619.index
+2980152613.index
+676377385.index
+163629642.index
+1800776.index
+2883875615.index
+3994360676.index

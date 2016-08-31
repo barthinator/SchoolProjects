@@ -1,0 +1,75 @@
+import java.util.Scanner;
+/*
+Author: Joshua Sasaki                                       		
+Date:      2/24/2016                                                              	
+Purpose:   Simulation of an operating system     	
+*/
+
+public class JoshClient {
+	public static void main(String[] args) {
+		//used to call caertain methods
+		Josh os = new  Josh();
+		Scanner scan = new Scanner(System.in);
+		
+		os.setOS(1);
+		os.numCPUS(4);
+		//makes the program always run
+		while (true)
+		{
+			String instruction = scan.nextLine();
+			//help
+			if(instruction.equals("help"))
+			{
+				//runs the command help
+				os.help();
+			}
+			else if(instruction.equals("show pct"))
+			{
+				//runs show pct
+				os.showPCT();
+			}
+			else if(instruction.contains("kill "))
+			{
+				if(instruction.length()==9)
+				{
+				String id = instruction.substring(5, 9);
+				os.kill(id);
+				}
+				else
+				{
+					System.out.println("not a valid id");
+				}
+			}
+			else if(instruction.equals("run"))
+			{
+				//runs run
+				os.run();
+			}
+			else if(instruction.equals("show pit"))
+			{
+				//runs show pit
+				os.showPIT();
+			}
+			else if(instruction.equals("ps"))
+			{
+				//runs ps
+				os.pS();
+			}
+
+			//exit
+			else if(instruction.equals("exit"))
+			{
+				//exits the program so the user does not have to find a different way to terminate
+				return;
+			}
+			else
+			{
+				//if a non valid commmand is entered this prints
+				System.out.println("'"+instruction+"'"+" is not recognized as a command.");
+			}
+		}
+
+
+	}
+
+}

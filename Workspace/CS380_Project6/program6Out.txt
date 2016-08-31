@@ -1,0 +1,161 @@
+
+David Bartholomew      002510408      CS 380  
+  Spring 2016   Project # 6
+
+
+In-Order Traversal:
+A               	ABOUT           	ADDRESSED       	AGREED          	AI              	
+ALAN            	ALLEN           	ALMOST          	AND             	ANIMALS         	
+ANIMATE         	ANSWER          	ANY             	APART           	ARE             	
+AREAS           	ARTIFICIAL      	AS              	ASKING          	ASSOCIATED      	
+AT              	AUTOMATED       	BE              	BERLINER        	BERTHOLD        	
+BINARY          	BOTH            	BOUND           	BRIEF           	BUT             	
+BY              	CAN             	CAT             	CENTRAL         	CERTAIN         	
+CHALLENGING     	CHAPTER         	CHARACTERISTIC  	CHARACTERISTICS 	CHARACTERIZE    	
+CLASSIC         	COMPUTER        	CONCLUDES       	CONDITIONS      	CONTINUUM       	
+CONTRARY        	CONTRIBUTIONS   	CREATE          	CREATURES       	CRITICISMS      	
+DAVIS           	DAY             	DECLARED        	DEFINITION      	DISCIPLINE      	
+DISCUSSION      	DISPLAY         	DISTINGUISHES   	DOG             	DONALD          	
+DOUBTS          	DOUGLAS         	EDWARD          	ETC             	EVERYDAY        	
+EXAMPLES        	EXPERIENCE      	EXPERT          	EXTENT          	FACE            	
+FACT            	FAR             	FASCINATING     	FEASIBILITY     	FEIGENBAUM      	
+FIELD           	FOLLOWED        	FOUNDERS        	FROM            	FUNCTION        	
+GAME            	GOAL            	HANS            	HAS             	HEART           	
+HERBERT         	HIGHLY          	HIMSELF         	HISTORY         	HOPFIELD        	
+HORN            	HOUSEHOLD       	HOWEVER         	HUMAN           	HUMANKIND       	
+HUMANS          	IF              	IMITATION       	IMPORTANT       	IN              	
+INANIMATE       	INTELLIGENCE    	INTELLIGENT     	INTRODUCTION    	IS              	
+ISSUE           	ISSUES          	IT              	JOHN            	KNOWLEDGE       	
+KNOWN           	LANGUAGE        	LANGUAGES       	LARRY           	LEARNING        	
+LENAT           	LIGHT           	LISP            	MACHINE         	MACHINES        	
+MACHNE          	MARVIN          	MAY             	MCCARTHY        	MICHALSKI       	
+MICHIE          	MINSKY          	MORONIC         	MOST            	NATURAL         	
+NATURE          	NEAT            	NETWORKS        	NEURAL          	NEW             	
+NEWELL          	NEXT            	NO              	NONHUMAN        	NOT             	
+OBJECTIVE       	OF              	ONE             	OPENS           	OPERATIONAL     	
+OPINIONS        	OR              	OTHER           	OTHERS          	OUR             	
+OUTLINED        	PATTERN         	PAUL            	PEOPLE          	PETS            	
+PIVOTAL         	PLAYING         	POSSIBLE        	PREPARED        	PRESENT         	
+PROBLEM         	PROCESSING      	PRODUCTION      	PROFOUND        	PROLOG          	
+PROPOSED        	PROVIDES        	QUALIFIED       	QUESTION        	QUESTIONS       	
+RAISED          	RAJ             	RANDALL         	RATHER          	REACTIONS       	
+REASONING       	RECOGNITION     	REDDY           	RELATIVELY      	REPRESENTATION  	
+REPRESENTATIVE  	RESEARCH        	RESEARCHERS     	RESTATEMENT     	ROBOTICS        	
+ROGER           	RYSZARD         	SCHANK          	SCIENCE         	SEARCH          	
+SETTING         	SEVERAL         	SHOULD          	SIMON           	SMARTER         	
+SOLVING         	SOME            	SPECIAL         	STILL           	STIMULATE       	
+STOOD           	STRONG          	SUGGESTION      	SUMMARY         	SURPRISE        	
+SYSTEMS         	TEACH           	TECHNIQUES      	TERRY           	TEST            	
+THAN            	THAT            	THE             	THERE           	THESE           	
+THINK           	THIS            	THOSE           	TIME            	TO              	
+TOPICS          	TURING          	UNAMBIGUOUS     	UNDER           	UNIVERSALLY     	
+UP              	UPON            	USUALLY         	VERY            	VISION          	
+WATERMAN        	WAYS            	WELL            	WHAT            	WHERE           	
+WHICH           	WHILE           	WINOGRAD        	WITH            	WOS             	
+YES             	
+Word Count: 241
+
+Pre-Order Traversal:
+INTRODUCTION    	FIELD           	ARTIFICIAL      	AND             	ABOUT           	
+A               	ALMOST          	AGREED          	ADDRESSED       	ALAN            	
+AI              	ALLEN           	AREAS           	ANIMATE         	ANIMALS         	
+APART           	ANY             	ANSWER          	ARE             	FASCINATING     	
+CHALLENGING     	BOTH            	AS              	BE              	AT              	
+ASSOCIATED      	ASKING          	AUTOMATED       	BINARY          	BERLINER        	
+BERTHOLD        	BOUND           	CENTRAL         	CAN             	BUT             	
+BRIEF           	BY              	CAT             	CERTAIN         	COMPUTER        	
+CHARACTERISTIC  	CHAPTER         	CHARACTERISTICS 	CLASSIC         	CHARACTERIZE    	
+DISTINGUISHES   	CREATURES       	CREATE          	CONDITIONS      	CONCLUDES       	
+CONTINUUM       	CONTRARY        	CONTRIBUTIONS   	DECLARED        	CRITICISMS      	
+DAY             	DAVIS           	DISPLAY         	DISCIPLINE      	DEFINITION      	
+DISCUSSION      	FACE            	EXTENT          	EVERYDAY        	DOG             	
+DOUBTS          	DONALD          	ETC             	DOUGLAS         	EDWARD          	
+EXPERIENCE      	EXAMPLES        	EXPERT          	FACT            	FAR             	
+FEASIBILITY     	FEIGENBAUM      	INTELLIGENCE    	HAS             	FROM            	
+FOLLOWED        	FOUNDERS        	GOAL            	FUNCTION        	GAME            	
+HANS            	HUMANKIND       	HEART           	HUMAN           	HOWEVER         	
+HIGHLY          	HERBERT         	HOUSEHOLD       	HIMSELF         	HISTORY         	
+HORN            	HOPFIELD        	HUMANS          	INANIMATE       	IN              	
+IF              	IMITATION       	IMPORTANT       	INTELLIGENT     	THE             	
+OF              	IS              	MOST            	IT              	ISSUE           	
+ISSUES          	MAY             	MACHINES        	LIGHT           	LANGUAGE        	
+KNOWLEDGE       	JOHN            	KNOWN           	LANGUAGES       	LEARNING        	
+LARRY           	LENAT           	MACHINE         	LISP            	MACHNE          	
+MARVIN          	MORONIC         	MCCARTHY        	MINSKY          	MICHIE          	
+MICHALSKI       	NATURE          	NATURAL         	NONHUMAN        	NEAT            	
+NO              	NEXT            	NEW             	NEURAL          	NETWORKS        	
+NEWELL          	NOT             	OBJECTIVE       	ONE             	SCIENCE         	
+RAISED          	PROFOUND        	OTHER           	OR              	OPERATIONAL     	
+OPENS           	OPINIONS        	POSSIBLE        	PIVOTAL         	OUR             	
+OTHERS          	PEOPLE          	OUTLINED        	PATTERN         	PAUL            	
+PETS            	PLAYING         	PREPARED        	PRESENT         	PROBLEM         	
+PROCESSING      	PRODUCTION      	QUESTIONS       	QUESTION        	QUALIFIED       	
+PROPOSED        	PROLOG          	PROVIDES        	REACTIONS       	RATHER          	
+RANDALL         	RAJ             	RESEARCH        	RELATIVELY      	REASONING       	
+RECOGNITION     	REDDY           	REPRESENTATIVE  	REPRESENTATION  	RESTATEMENT     	
+RESEARCHERS     	ROBOTICS        	ROGER           	SCHANK          	RYSZARD         	
+SOME            	SETTING         	SEARCH          	SHOULD          	SEVERAL         	
+SMARTER         	SIMON           	SOLVING         	SUGGESTION      	STIMULATE       	
+SPECIAL         	STILL           	STRONG          	STOOD           	THAT            	
+TEACH           	SURPRISE        	SUMMARY         	SYSTEMS         	THAN            	
+TEST            	TECHNIQUES      	TERRY           	VERY            	UNIVERSALLY     	
+TO              	THIS            	THINK           	THERE           	THESE           	
+THOSE           	TIME            	UNDER           	TURING          	TOPICS          	
+UNAMBIGUOUS     	UPON            	UP              	USUALLY         	WHAT            	
+WAYS            	VISION          	WATERMAN        	WELL            	WITH            	
+WHERE           	WHILE           	WHICH           	WINOGRAD        	YES             	
+WOS             	
+Word Count: 241
+
+Post-Order Traversal:
+A               	ADDRESSED       	AI              	ALLEN           	ALAN            	
+AGREED          	ALMOST          	ABOUT           	ANIMALS         	ANSWER          	
+ANY             	ARE             	APART           	ANIMATE         	AREAS           	
+AND             	ASKING          	ASSOCIATED      	AUTOMATED       	AT              	
+BERTHOLD        	BERLINER        	BINARY          	BE              	AS              	
+BRIEF           	BY              	BUT             	CAT             	CAN             	
+CERTAIN         	CENTRAL         	BOUND           	BOTH            	CHAPTER         	
+CHARACTERIZE    	CLASSIC         	CHARACTERISTICS 	CHARACTERISTIC  	CONCLUDES       	
+CONTRIBUTIONS   	CONTRARY        	CONTINUUM       	CONDITIONS      	CREATE          	
+DAVIS           	DAY             	CRITICISMS      	DEFINITION      	DISCUSSION      	
+DISCIPLINE      	DISPLAY         	DECLARED        	CREATURES       	DONALD          	
+EDWARD          	DOUGLAS         	ETC             	DOUBTS          	DOG             	
+EXAMPLES        	EXPERT          	EXPERIENCE      	EVERYDAY        	EXTENT          	
+FAR             	FACT            	FACE            	DISTINGUISHES   	COMPUTER        	
+CHALLENGING     	FEIGENBAUM      	FEASIBILITY     	FASCINATING     	ARTIFICIAL      	
+FOUNDERS        	FOLLOWED        	GAME            	FUNCTION        	HANS            	
+GOAL            	FROM            	HERBERT         	HOPFIELD        	HORN            	
+HISTORY         	HIMSELF         	HOUSEHOLD       	HIGHLY          	HOWEVER         	
+HUMAN           	HEART           	IMPORTANT       	IMITATION       	IF              	
+IN              	INANIMATE       	HUMANS          	HUMANKIND       	HAS             	
+INTELLIGENT     	INTELLIGENCE    	FIELD           	ISSUES          	ISSUE           	
+JOHN            	KNOWN           	KNOWLEDGE       	LARRY           	LENAT           	
+LEARNING        	LANGUAGES       	LANGUAGE        	LISP            	MACHINE         	
+LIGHT           	MARVIN          	MACHNE          	MACHINES        	MICHALSKI       	
+MICHIE          	MINSKY          	MCCARTHY        	MORONIC         	MAY             	
+IT              	NATURAL         	NETWORKS        	NEURAL          	NEWELL          	
+NEW             	NEXT            	NO              	NEAT            	OBJECTIVE       	
+NOT             	NONHUMAN        	NATURE          	MOST            	IS              	
+OPENS           	OPINIONS        	OPERATIONAL     	OR              	OTHERS          	
+PAUL            	PATTERN         	OUTLINED        	PETS            	PEOPLE          	
+OUR             	PLAYING         	PIVOTAL         	PRODUCTION      	PROCESSING      	
+PROBLEM         	PRESENT         	PREPARED        	POSSIBLE        	OTHER           	
+PROLOG          	PROVIDES        	PROPOSED        	QUALIFIED       	QUESTION        	
+QUESTIONS       	PROFOUND        	RAJ             	RANDALL         	RATHER          	
+REDDY           	RECOGNITION     	REASONING       	REPRESENTATION  	REPRESENTATIVE  	
+RELATIVELY      	RESEARCHERS     	RYSZARD         	SCHANK          	ROGER           	
+ROBOTICS        	RESTATEMENT     	RESEARCH        	REACTIONS       	RAISED          	
+SEARCH          	SEVERAL         	SIMON           	SOLVING         	SMARTER         	
+SHOULD          	SETTING         	STILL           	SPECIAL         	STOOD           	
+STRONG          	STIMULATE       	SUMMARY         	SYSTEMS         	SURPRISE        	
+TERRY           	TECHNIQUES      	TEST            	THAN            	TEACH           	
+THAT            	SUGGESTION      	SOME            	SCIENCE         	ONE             	
+OF              	THESE           	THERE           	THINK           	TIME            	
+THOSE           	THIS            	TOPICS          	UNAMBIGUOUS     	TURING          	
+UNDER           	TO              	UP              	USUALLY         	UPON            	
+UNIVERSALLY     	WATERMAN        	VISION          	WELL            	WAYS            	
+WHICH           	WINOGRAD        	WHILE           	WHERE           	WOS             	
+YES             	WITH            	WHAT            	VERY            	THE             	
+INTRODUCTION    	
+Word Count: 241
+

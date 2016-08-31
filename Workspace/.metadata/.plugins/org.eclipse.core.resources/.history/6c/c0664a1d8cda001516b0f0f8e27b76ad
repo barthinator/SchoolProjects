@@ -1,0 +1,37 @@
+
+public class CS380_Project_DavidBartholomew {	
+	public static char[][] GenericMaze = {
+			{'X','X','X','X','X','X','X','X','X','X'},
+			{'X','.','X','.','.','.','X','.','X','X'},
+			{'X','.','X','X','.','X','.','.','X','X'},
+			{'X','.','X','X','X','X','.','.','.','X'},
+			{'X','.','.','.','.','.','.','X','.','X'},
+			{'X','X','X','X','.','X','X','.','.','X'},
+			{'X','X','X','.','X','.','.','X','.','X'},
+			{'X','.','X','X','X','.','X','X','.','X'},
+			{'X','.','.','X','X','.','.','X','X','X'},
+			{'X','X','X','X','X','X','X','X','X','X'}};
+	
+	
+//	public static char[][] GenericMaze = {
+//			{'X','X','X','X','X','X','X','X','X','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','.','.','.','.','.','.','.','.','X'},
+//			{'X','X','X','X','X','X','X','X','X','X'}};
+	
+public static void main(String[] args) {
+		Coord startCoord = new Coord(1,1);
+		Coord endCoord = new Coord(7,8);
+		MazeStack stackMaze = new MazeStack();
+		stackMaze.pathExists(GenericMaze, startCoord, endCoord);
+//		MazeQueue queueMaze = new MazeQueue();		
+//		queueMaze.pathExists(GenericMaze, startCoord, endCoord); 
+}
+
+}

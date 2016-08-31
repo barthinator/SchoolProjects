@@ -1,0 +1,102 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BST {
+
+	public Node root = null;
+
+	public String[] readIn(String inputFile){
+
+		File file = new File(inputFile);
+
+		Scanner scan = null;
+		try{
+			scan = new Scanner(file);
+		} catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+
+		String s = scan.nextLine();
+		s = s.replaceAll("[^a-zA-Z\\s]", "");
+
+		String[] words = s.split("\\s");
+
+		return words;
+
+	}
+
+	public boolean insert(String s){
+		if (root == null)  {   
+			root = new Node(s);
+			return true; 
+		}
+
+		Node cur = root;
+		for (;;){
+			if (s.compareTo(cur.getName()) == 0)
+				return false; 
+
+			if (s.compareTo(cur.getName()) < 0){
+				if (cur.getLeft() != null)      
+					cur = cur.getLeft();
+				else{
+					cur.setLeft(new Node(s));
+					return true;
+				}
+			}
+			else if (s.compareTo(cur.getName()) > 0){
+				if (cur.getRight() != null)      
+					cur = cur.getRight();
+				else{
+					cur.setRight(new Node(s));
+					return true;
+				}
+			}
+		}
+	}
+
+	public void creatBST(String[] array){
+		int total = 0;
+		for(int i = 0; i < array.length; i++){
+			if(insert(array[i])){
+				total++;
+			}
+		}
+
+		System.out.println(total);
+	}
+
+	void PostOrder(Node cur)
+	{
+		if (cur == null)
+			return;
+
+		PostOrder(cur.getLeft());
+		PostOrder(cur.getRight());
+		System.out.println(cur.getName());
+	}
+	
+	void InOrder(Node cur)
+	{
+		if (cur == null)
+			return;
+
+		PostOrder(cur.getLeft());
+		System.out.println(cur.getName());
+		PostOrder(cur.getRight());
+	}
+	
+	void PreOrder(Node cur)
+	{
+		if (cur == null)
+			return;
+
+		System.out.println(cur.getName());
+		PostOrder(cur.getLeft());
+		PostOrder(cur.getRight());
+	}
+
+}

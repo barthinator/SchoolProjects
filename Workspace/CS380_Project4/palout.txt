@@ -1,0 +1,11 @@
+                        String	isPalindrome
+                        ------	------------
+                        level 	    true
+                      Pot top 	    true
+  A man a plan a canal Panama 	    true
+                         Radar	    true
+                          Abba	    true
+                           dog	   false
+                         David	   false
+                         Berry	   false
+                        Hannah	    true

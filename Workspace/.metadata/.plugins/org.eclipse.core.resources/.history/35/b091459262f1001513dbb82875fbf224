@@ -1,0 +1,382 @@
+import java.util.Arrays;
+
+public class Josh {
+	/*
+	Author:                                        		
+	Date:      2/24/2016                                                              	
+	Purpose:   Simulation of an operating system     	
+	 */
+	//no idea what this is for.... but we were told to include it
+	private static int CPUtimer=0;
+
+	private int pri1=0;
+	private int pri2=0;
+	private int pri3=0;
+	private int pri4=0;
+	//number of CPU
+	private int numberOfCPU=0;
+	//arrays
+	private String [][] dataPCT = new String [17][7];		
+	private String[][]dataPIT= new String [17][13];
+
+	//instantiates the default of the array
+	private String [][] pct= {
+			{"1001","1","waiting   ","0","1","0"},
+			{"1001","2","waiting   ","0","1","0"},
+			{"1002","1","waiting   ","0","1","0"},
+			{"1002","2","waiting   ","0","2","0"},
+			{"1002","3","waiting   ","0","3","0"},
+			{"1003","1","waiting   ","0","1","0"},
+			{"1004","1","waiting   ","0","1","0"},
+			{"1005","1","waiting   ","0","4","0"},
+			{"1006","1","waiting   ","0","1","0"},
+			{"1007","1","waiting   ","0","3","0"},
+			{"1007","2","waiting   ","0","2","0"},
+			{"1008","1","waiting   ","0","4","0"},
+			{"1008","2","waiting   ","0","4","0"},
+			{"1008","3","waiting   ","0","3","0"},
+			{"1009","1","waiting   ","0","2","0"},
+			{"1009","2","waiting   ","0","2","0"}};	
+	private String [][] pct2= {
+			{"1001","1","waiting   ","0","1","0"},
+			{"1001","2","waiting   ","0","1","0"},
+			{"1002","1","waiting   ","0","1","0"},
+			{"1002","2","waiting   ","0","2","0"},
+			{"1002","3","waiting   ","0","2","0"},
+			{"1003","1","waiting   ","0","2","0"},
+			{"1004","1","waiting   ","0","2","0"},
+			{"1005","1","waiting   ","0","3","0"},
+			{"1006","1","waiting   ","0","3","0"},
+			{"1007","1","waiting   ","0","3","0"},
+			{"1007","2","waiting   ","0","3","0"},
+			{"1008","1","waiting   ","0","4","0"},
+			{"1008","2","waiting   ","0","4","0"},
+			{"1008","3","waiting   ","0","1","0"},
+			{"1009","1","waiting   ","0","1","0"},
+			{"1009","2","waiting   ","0","1","0"}};	
+	private String [][] pct3= {
+			{"1001","1","waiting   ","0","1","0"},
+			{"1001","2","waiting   ","0","1","0"},
+			{"1002","1","waiting   ","0","1","0"},
+			{"1002","2","waiting   ","0","2","0"},
+			{"1002","3","waiting   ","0","3","0"},
+			{"1003","1","waiting   ","0","1","0"},
+			{"1004","1","waiting   ","0","1","0"},
+			{"1005","1","waiting   ","0","4","0"},
+			{"1006","1","waiting   ","0","1","0"},
+			{"1007","1","waiting   ","0","3","0"},
+			{"1007","2","waiting   ","0","2","0"},
+			{"1008","1","waiting   ","0","4","0"},
+			{"1008","2","waiting   ","0","4","0"},
+			{"1008","3","waiting   ","0","3","0"},
+			{"1009","1","waiting   ","0","2","0"},
+			{"1009","2","waiting   ","0","2","0"}};	
+
+	private String [][] pit={
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","input-1","output-1","finish"},
+			{"compute-1","input-1","compute-2","output-1","finish"},
+			{"compute-1","compute-2","finish"},
+			{"compute-1","compute-2","compute-3","compute-1","compute-2","finish"},
+			{"compute-1","input-1","compute-2","compute-3","finish"},
+			{"finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","input-1","output-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","input-1","output-1","finish"},
+			{"compute-1","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","input-1","output-1","finish"},
+			{"compute-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"}};
+
+	private String [][] pit2={
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","input-1","output-1","finish"},
+			{"compute-1","input-1","compute-2","output-1","finish"},
+			{"compute-1","compute-2","finish"},
+			{"compute-1","compute-2","compute-3","compute-1","compute-2","finish"},
+			{"compute-1","input-1","compute-2","compute-3","finish"},
+			{"finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","input-1","output-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","input-1","output-1","finish"},
+			{"compute-1","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","input-1","output-1","finish"},
+			{"compute-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"}};
+
+	private String [][] pit3={
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","input-1","output-1","finish"},
+			{"compute-1","input-1","compute-2","output-1","finish"},
+			{"compute-1","compute-2","finish"},
+			{"compute-1","compute-2","compute-3","compute-1","compute-2","finish"},
+			{"compute-1","input-1","compute-2","compute-3","finish"},
+			{"finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","input-1","output-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","input-1","output-1","finish"},
+			{"compute-1","compute-3","input-1","output-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"},
+			{"compute-1","input-1","output-1","finish"},
+			{"compute-1","finish"},
+			{"compute-1","compute-2","compute-3","input-1","output-1","finish"}};
+	//user is able to set the OS
+	public void setOS(int num)
+	{
+		
+		if(num==1)
+		{
+			for(int r=0; r<pct.length; r++)
+			{
+				for (int c=0; c<pct[r].length; c++)
+				{
+					dataPCT[r+1][c+1]=pct[r][c];
+				}
+			}
+			for(int r=0; r<pit.length; r++)
+			{
+				for (int c=0; c<pit[r].length; c++)
+				{
+					dataPIT[r+1][c+1]=pit[r][c];
+				}
+			}
+		}
+		else if(num==2)
+		{
+			for(int r=0; r<pct2.length; r++)
+			{
+				for (int c=0; c<pct2[r].length; c++)
+				{
+					dataPCT[r+1][c+1]=pct2[r][c];
+				}
+			}
+			for(int r=0; r<pit2.length; r++)
+			{
+				for (int c=0; c<pit2[r].length; c++)
+				{
+					dataPIT[r+1][c+1]=pit2[r][c];
+				}
+			}
+		}
+		else if(num==3)
+		{
+			for(int r=0; r<pct3.length; r++)
+			{
+				for (int c=0; c<pct3[r].length; c++)
+				{
+					dataPCT[r+1][c+1]=pct3[r][c];
+				}
+			}
+			for(int r=0; r<pit3.length; r++)
+			{
+				for (int c=0; c<pit3[r].length; c++)
+				{
+					dataPIT[r+1][c+1]=pit3[r][c];
+				}
+			}
+		}
+	}
+	//tells the number of cpus can run
+	public void numCPUS(int cpuNum)
+	{
+		numberOfCPU=cpuNum;
+	}
+
+	//show pit
+	public void showPIT()
+	{
+		//prints out the processes that can be run
+		for (int r=1; r<pit.length; r++)
+		{
+			// to get the id to print correctly starting at 1
+			System.out.print("Process "+dataPCT[r][1]  + " Thread "+dataPCT[r][2]+": ");
+			for (int c=0; c<pit[r].length; c++)
+			{
+				System.out.print(dataPIT[r][c]+", ");
+			}
+			System.out.println();
+		}
+	}
+
+	//shows the current os that is running.
+	public void showPCT()
+	{
+		//prints out the table
+		System.out.println("Process-id\tThread\t\tStatus\t  \tCPU-time-used\t    Job-priority   Current-instruction-counter");
+		for (int r=1; r<dataPCT.length; r++)
+		{
+			for (int c=1; c<dataPCT[r].length; c++)
+			{
+				System.out.print(dataPCT[r][c]+"\t\t");
+			}
+			System.out.println();
+		}
+	}
+
+	//shows all the active processes
+	public void pS()
+	{
+		// shows the current running processes
+		//checks to see if the count of the number terminated is equal to the number of processes
+		int count=0;
+		for (int r=1; r<dataPCT.length; r++)
+		{
+			//increment each time a process is terminated
+			if (dataPCT[r][3].equals("terminated"))
+			{
+				count++;
+			}
+		}
+		if (count>=dataPCT.length)
+		{
+			//prints not processes are active if the count of terminated equals the count of the number of processes
+			System.out.println("There is no active process to list!");
+		}
+		else
+		{
+			System.out.println("Process-id\tThread\t\tStatus\t  \tCPU-time-used\t    Job-priority   Current-instruction-counter");
+			for (int r=1; r<dataPCT.length; r++)
+			{
+				//the reason why running has q3 spaces after is a formating preference so the chart looks nice. 
+				if(dataPCT[r][3].equals("running   ")||dataPCT[r][3].equals("waiting   ")||dataPCT[r][3].equals("ready     "))
+				{
+					//if the process is seen as running it prints out the process and the status and the priority and time used
+					for (int c=1;c<dataPCT[r].length;c++)
+					{
+						System.out.print(dataPCT[r][c]+"\t\t");
+					}
+					System.out.println();
+				}
+
+			}
+		}
+	}
+	//displays what commands can be typed
+	public void help()
+	{
+		System.out.println("show pct- to show the complete contents of the process control table(PCT)");
+		System.out.println("show pit- to ishow the complete contents of the process instruction table (PIT)");
+		System.out.println("ps- to show the complete contents of PCT for only active processes. A process is active\nif any of its threads is not terminated yet");
+		System.out.println("kill (pid) - to kill and terminate the process pit and all its threads at the same time");
+		System.out.println("set numCPUs (K)- To set the system variable numCPUS to value k");
+		System.out.println("set OS (N)- To load PCT and PIT of of OS (N) where (N) is a number set of PCT and PIT dataPCT");
+		System.out.println("exit- will terminate the program");
+	}
+
+	//kills process and all of its threads
+	public void kill(String id)
+	{
+		int num=0;
+		for (int r=1; r<dataPCT.length; r++)
+		{
+			if(id.equals(dataPCT[r][1]) && dataPCT[r][3] != "terminated")
+			{
+				dataPCT[r][3]="terminated";
+				num++;
+			}
+		}
+		if(num==0)
+		{
+			System.out.println("id not valid");
+		}
+	}
+
+	String priority = "1";
+
+	public void run (){
+
+		/**Going to attempt this with bubble sort**/
+		
+		 int j;
+	     boolean flag = true;   // set flag to true to begin first pass
+	     String[] temp;   //holding variable
+	     String[][] tempPCT = Arrays.copyOf(dataPCT, dataPCT.length);
+	    
+	     while (flag)
+	     {
+	    	 flag= false;    //set flag to false awaiting a possible swap
+	    	 for(j=1; j < tempPCT.length -1; j++)
+	    	 {
+	    		 if ( Integer.parseInt(tempPCT[j][5]) > Integer.parseInt(tempPCT[j+1][5]))   // change to > for ascending sort
+	    		 {
+	    			 temp = tempPCT[j];             //swap elements
+	    			 tempPCT[j] = tempPCT[j+1];
+	    			 tempPCT[j+1] = temp;
+	    			 flag = true;              //shows a swap occurred  
+	    		 } 
+	    	 } 
+	     }
+
+	     
+	     for(int i = 0; i < numberOfCPU; i++){
+	    	 for(int k = 1; k < tempPCT.length; k++){
+	    		 for(int h = 1; h < dataPCT.length; h++){
+	    			 if(tempPCT[1][k] == dataPCT[1][h] && tempPCT[2][k] == dataPCT[2][h]){
+	    				 dataPCT[3][h] = "running   ";
+	    			 }
+	    		 }
+	    	 }
+	     }
+		
+	
+//		int counter = 0;
+//		for(int r = 1; r < dataPCT.length; r++){
+//			if(dataPCT[r][3].equals("waiting   ") && dataPCT[r][5].equals(priority)){
+//				counter++;
+//			}
+//		}
+//
+//		int timesRun = 0;
+//		int amountRemaining = 0;
+//
+//		for(int r = 1; r < dataPCT.length; r++){
+//			
+//			
+//			
+//			if(dataPCT[r][3].equals("waiting   ") && dataPCT[r][5].equals(priority)){
+//				
+//
+//
+//				if(counter >= numberOfCPU && timesRun < numberOfCPU){
+//					dataPCT[r][3] = "running   ";
+//					timesRun++;
+//				}
+//				
+//				if(counter < numberOfCPU && timesRun <= numberOfCPU){
+//					if(numberOfCPU - counter >= timesRun){
+//						dataPCT[r][3] = "running   ";
+//						timesRun++;
+//					}
+//					
+//					if(numberOfCPU - counter == timesRun){
+//						int i = Integer.parseInt(priority);
+//						i++;
+//						priority = i + "";
+//						r = 0;
+//						//resets the loop
+//					}
+//					
+//					if(numberOfCPU - counter <= timesRun){
+//						dataPCT[r][3] = "running   ";
+//						timesRun++;
+//					}
+//				}
+//				
+//			}
+//			
+//			for (int i = 1; i < dataPCT.length; i++){
+//				if(dataPCT[r][3].equals("waiting   "));
+//					amountRemaining++;
+//			}
+//			
+//		}
+
+	}
+
+}
+

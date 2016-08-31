@@ -1,0 +1,10 @@
+import java.util.Arrays;
+
+public class CS380_Project_DavidBartholomew {
+	public static void main(String args[]){
+		BST b = new BST();
+		String[] s = b.readIn("program6In.txt");
+		b.creatBST(s);
+		b.InOrder(b.root);
+	}
+}
